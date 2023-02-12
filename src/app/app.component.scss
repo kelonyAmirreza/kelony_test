@@ -1,0 +1,31 @@
+.divWidth {
+    max-width: 90%;
+    margin: auto;
+    border-radius: 25px;
+    vertical-align: 50%;
+}
+
+.backColGrey {
+    background-color: rgba($color: #dcdcdc, $alpha: 0.5);
+}
+
+button {
+    border-radius: 25px;
+}
+
+p {
+    font-size: 26px;
+    text-align: right;
+    max-width: fit-content;
+}
+
+.horizontal_line {
+    background-color: black;
+    width: 90%;
+    height: 5px;
+    border-top: 5px solid black;
+    line-height: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,30 @@
+<div class="d-grid gap-7 d-sm-flex w-50" style="margin: 0 auto">
+    <input
+        type="file"
+        class="form-control form-control-lg"
+        (change)="onChange($event)"
+        #fileUpload
+    />
+</div>
+<div class="d-grid gap-7 d-sm-flex" style="margin: 0 auto; margin-bottom: 20px">
+    <button
+        type="button"
+        class="btn btn-light btn-rounded btn-lg"
+        style="margin: 0 auto; margin-top: 10px; background-color: #bdbdbd"
+        (click)="onUpload()"
+    >
+        Upload
+    </button>
+</div>
+
+<!-- Shareable short link of  uploaded file -->
+<div class="container d-grid gap-7 d-sm-flex" *ngIf="shortLink">
+    <h2 class="fw-bold text-black" style="margin: 0 auto">
+        {{ this.file?.name }} uploaded to: <a href="{{ shortLink }}">Link</a>
+    </h2>
+</div>
+
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+    <h3 class="fw-bold text-black">Loading ...</h3>
+</div>
